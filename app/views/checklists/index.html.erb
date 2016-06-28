@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Checklists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client name</th>
+      <th>Grounds</th>
+      <th>Petitioner preg aff</th>
+      <th>Pregnancy affidavit respondent</th>
+      <th>Waiver petitioner s</th>
+      <th>Waiver respondent s</th>
+      <th>Msa</th>
+      <th>Residency proof</th>
+      <th>Social security petitioner</th>
+      <th>Social security respondent</th>
+      <th>A</th>
+      <th>Discovery waiver signed by both</th>
+      <th>Discovery waiver signed by petitioner</th>
+      <th>Discovery waiver signed by respondent</th>
+      <th>Financial affidavit petitioner</th>
+      <th>Financial affidavit respondent</th>
+      <th>Child custody affidavit</th>
+      <th>Parenting course husband</th>
+      <th>Parenting course wife</th>
+      <th>Parenting plan</th>
+      <th>Gudelines</th>
+      <th>Addendum</th>
+      <th>Notes</th>
+      <th>Client email address</th>
+      <th>Send link email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @checklists.each do |checklist| %>
+      <tr>
+        <td><%= checklist.Client_Name %></td>
+        <td><%= checklist.Grounds %></td>
+        <td><%= checklist.Petitioner_Preg_Aff %></td>
+        <td><%= checklist.Pregnancy_Affidavit_Respondent %></td>
+        <td><%= checklist.Waiver_Petitioner_s %></td>
+        <td><%= checklist.Waiver_Respondent_s %></td>
+        <td><%= checklist.MSA %></td>
+        <td><%= checklist.Residency_Proof %></td>
+        <td><%= checklist.Social_Security_Petitioner %></td>
+        <td><%= checklist.Social_Security_Respondent %></td>
+        <td><%= checklist.A %></td>
+        <td><%= checklist.Discovery_Waiver_Signed_by_Both %></td>
+        <td><%= checklist.Discovery_Waiver_Signed_by_Petitioner %></td>
+        <td><%= checklist.Discovery_Waiver_Signed_by_Respondent %></td>
+        <td><%= checklist.Financial_Affidavit_Petitioner %></td>
+        <td><%= checklist.Financial_Affidavit_Respondent %></td>
+        <td><%= checklist.Child_Custody_Affidavit %></td>
+        <td><%= checklist.Parenting_Course_Husband %></td>
+        <td><%= checklist.Parenting_Course_Wife %></td>
+        <td><%= checklist.Parenting_Plan %></td>
+        <td><%= checklist.Gudelines %></td>
+        <td><%= checklist.Addendum %></td>
+        <td><%= checklist.Notes %></td>
+        <td><%= checklist.Client_Email_Address %></td>
+        <td><%= checklist.Send_Link_Email %></td>
+        <td><%= link_to 'Show', checklist %></td>
+        <td><%= link_to 'Edit', edit_checklist_path(checklist) %></td>
+        <td><%= link_to 'Destroy', checklist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Checklist', new_checklist_path %>

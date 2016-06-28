@@ -1,0 +1,117 @@
+<%= form_for(@checklist) do |f| %>
+  <% if @checklist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@checklist.errors.count, "error") %> prohibited this checklist from being saved:</h2>
+
+      <ul>
+      <% @checklist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Client_Name %><br>
+    <%= f.text_field :Client_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Grounds %><br>
+    <%= f.text_field :Grounds %>
+  </div>
+  <div class="field">
+    <%= f.label :Petitioner_Preg_Aff %><br>
+    <%= f.text_field :Petitioner_Preg_Aff %>
+  </div>
+  <div class="field">
+    <%= f.label :Pregnancy_Affidavit_Respondent %><br>
+    <%= f.text_field :Pregnancy_Affidavit_Respondent %>
+  </div>
+  <div class="field">
+    <%= f.label :Waiver_Petitioner_s %><br>
+    <%= f.text_field :Waiver_Petitioner_s %>
+  </div>
+  <div class="field">
+    <%= f.label :Waiver_Respondent_s %><br>
+    <%= f.text_field :Waiver_Respondent_s %>
+  </div>
+  <div class="field">
+    <%= f.label :MSA %><br>
+    <%= f.text_field :MSA %>
+  </div>
+  <div class="field">
+    <%= f.label :Residency_Proof %><br>
+    <%= f.text_field :Residency_Proof %>
+  </div>
+  <div class="field">
+    <%= f.label :Social_Security_Petitioner %><br>
+    <%= f.text_field :Social_Security_Petitioner %>
+  </div>
+  <div class="field">
+    <%= f.label :Social_Security_Respondent %><br>
+    <%= f.text_field :Social_Security_Respondent %>
+  </div>
+  <div class="field">
+    <%= f.label :A %><br>
+    <%= f.text_field :A %>
+  </div>
+  <div class="field">
+    <%= f.label :Discovery_Waiver_Signed_by_Both %><br>
+    <%= f.text_field :Discovery_Waiver_Signed_by_Both %>
+  </div>
+  <div class="field">
+    <%= f.label :Discovery_Waiver_Signed_by_Petitioner %><br>
+    <%= f.text_field :Discovery_Waiver_Signed_by_Petitioner %>
+  </div>
+  <div class="field">
+    <%= f.label :Discovery_Waiver_Signed_by_Respondent %><br>
+    <%= f.text_field :Discovery_Waiver_Signed_by_Respondent %>
+  </div>
+  <div class="field">
+    <%= f.label :Financial_Affidavit_Petitioner %><br>
+    <%= f.text_field :Financial_Affidavit_Petitioner %>
+  </div>
+  <div class="field">
+    <%= f.label :Financial_Affidavit_Respondent %><br>
+    <%= f.text_field :Financial_Affidavit_Respondent %>
+  </div>
+  <div class="field">
+    <%= f.label :Child_Custody_Affidavit %><br>
+    <%= f.text_field :Child_Custody_Affidavit %>
+  </div>
+  <div class="field">
+    <%= f.label :Parenting_Course_Husband %><br>
+    <%= f.text_field :Parenting_Course_Husband %>
+  </div>
+  <div class="field">
+    <%= f.label :Parenting_Course_Wife %><br>
+    <%= f.text_field :Parenting_Course_Wife %>
+  </div>
+  <div class="field">
+    <%= f.label :Parenting_Plan %><br>
+    <%= f.text_field :Parenting_Plan %>
+  </div>
+  <div class="field">
+    <%= f.label :Gudelines %><br>
+    <%= f.text_field :Gudelines %>
+  </div>
+  <div class="field">
+    <%= f.label :Addendum %><br>
+    <%= f.text_field :Addendum %>
+  </div>
+  <div class="field">
+    <%= f.label :Notes %><br>
+    <%= f.text_field :Notes %>
+  </div>
+  <div class="field">
+    <%= f.label :Client_Email_Address %><br>
+    <%= f.text_field :Client_Email_Address %>
+  </div>
+  <div class="field">
+    <%= f.label :Send_Link_Email %><br>
+    <%= f.check_box :Send_Link_Email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
