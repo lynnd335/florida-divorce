@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: florida_divorce_production
+  database: florida_divorce_development
   username: florida_divorce
   password: <%= ENV['FLORIDA_DIVORCE_DATABASE_PASSWORD'] %>
