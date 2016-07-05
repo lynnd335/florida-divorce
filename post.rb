@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-uri = URI.parse("http://162.243.199.203/posts")
+uri = URI.parse("http://159.203.75.141/checklists")
 puts "uri = " + uri.to_s
 # BOUNDARY = "AaB03x"
 
@@ -11,8 +11,7 @@ puts "uri = " + uri.to_s
 header = {"Content-Type": "application/json"}
 post = ({
 
-                   'subject': 'totally',
-                   'content': 'awesome'
+                   'Client_Name': 'Whatever'
                    
                       
             })
@@ -28,6 +27,22 @@ request.body = post.to_json
 # Send the request
 response = http.request(request)
 puts request
+
+
+
+
+# void rails_backup_checklist()
+# {
+# 	req = {"subject" : "suck it", "content" : "LOL" };
+#     hdr = { "Content-Type" : "application/json" };
+#     resp = postUrl("http://162.243.199.203/posts", req, hdr,false);
+#     info resp;
+# }
+
+
+
+
+
 
 
 # http.each do |key, value|
